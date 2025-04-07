@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+#matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -2;
+    transition: opacity 1s ease;
+}
+
+#matrix-background.hidden {
+    opacity: 0;
+}
+
+#bathroom-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e6f3ff;
+    background-image: 
+        linear-gradient(45deg, #b3d9ff 25%, transparent 25%),
+        linear-gradient(-45deg, #b3d9ff 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #b3d9ff 75%),
+        linear-gradient(-45deg, transparent 75%, #b3d9ff 75%);
+    background-size: 100px 100px;
+    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+#bathroom-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+#bathroom-background:not(.hidden) {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+#startButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #00cc00;
+    transform: scale(1.1);
+}
+
+#riddle {
+    color: #000;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+} 
