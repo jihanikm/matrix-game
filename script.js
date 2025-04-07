@@ -46,10 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 버튼 클릭 이벤트
     startButton.addEventListener('click', () => {
-        startButton.classList.add('hidden');
-        matrixBackground.classList.add('hidden');
-        bathroomBackground.classList.remove('hidden');
-        riddle.classList.remove('hidden');
+        startButton.style.opacity = '0';
+        setTimeout(() => {
+            startButton.classList.add('hidden');
+            matrixBackground.style.opacity = '0';
+            setTimeout(() => {
+                matrixBackground.classList.add('hidden');
+                bathroomBackground.classList.remove('hidden');
+                bathroomBackground.style.opacity = '1';
+                setTimeout(() => {
+                    riddle.classList.remove('hidden');
+                    riddle.style.opacity = '1';
+                }, 500);
+            }, 500);
+        }, 300);
     });
 
     // 매트릭스 효과 시작
