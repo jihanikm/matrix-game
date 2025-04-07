@@ -28,15 +28,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
     background-image: 
-        linear-gradient(45deg, #ccc 25%, transparent 25%),
-        linear-gradient(-45deg, #ccc 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ccc 75%),
-        linear-gradient(-45deg, transparent 75%, #ccc 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        linear-gradient(45deg, #d1d1d1 25%, transparent 25%),
+        linear-gradient(-45deg, #d1d1d1 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #d1d1d1 75%),
+        linear-gradient(-45deg, transparent 75%, #d1d1d1 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
     z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .content {
@@ -68,15 +70,21 @@ body {
 
 #riddle {
     text-align: center;
-    font-size: 1.5em;
-    color: black;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    font-size: 2em;
+    color: #333;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
     margin-top: 20px;
-    line-height: 1.5;
-    max-width: 80%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .hidden {
