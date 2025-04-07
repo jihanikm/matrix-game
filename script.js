@@ -3,16 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bathroomBackground = document.getElementById('bathroom-background');
     const startButton = document.getElementById('startButton');
     const riddle = document.getElementById('riddle');
-    const qrCode = document.getElementById('qr-code');
-
-    // QR 코드 생성
-    function createQRCode() {
-        const url = 'https://letstreasurehunt.netlify.app/';
-        const qr = qrcode(0, 'M');
-        qr.addData(url);
-        qr.make();
-        qrCode.innerHTML = qr.createImgTag(10);
-    }
 
     // 매트릭스 효과 생성
     function createMatrixEffect() {
@@ -67,15 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     riddle.classList.remove('hidden');
                     riddle.style.opacity = '1';
-                    qrCode.classList.remove('hidden');
-                    qrCode.style.opacity = '1';
                 }, 500);
             }, 500);
         }, 300);
     });
-
-    // QR 코드 생성
-    createQRCode();
 
     // 매트릭스 효과 시작
     createMatrixEffect();
