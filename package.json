@@ -1,0 +1,12 @@
+{
+  "name": "matrix-game",
+  "version": "1.0.0",
+  "description": "Matrix Game with QR Code",
+  "main": "generate_qr.js",
+  "scripts": {
+    "generate-qr": "node generate_qr.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.3"
+  }
+} 
