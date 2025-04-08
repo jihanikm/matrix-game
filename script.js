@@ -53,9 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // 이벤트 리스너
     startButton.addEventListener('click', () => {
         startButton.classList.add('hidden');
+        bathroomBackground.classList.remove('hidden');
         bathroomBackground.style.opacity = '1';
+        riddle.classList.remove('hidden');
         riddle.style.opacity = '1';
-        qrCode.style.opacity = '1';
         clearInterval(matrixInterval);
     });
 
