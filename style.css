@@ -20,7 +20,7 @@ body {
     height: 100%;
     background-color: black;
     z-index: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 #bathroom-background {
@@ -39,7 +39,7 @@ body {
     background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
     z-index: 0;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
 }
 
 #bathroom-background::before {
@@ -103,7 +103,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.8s ease;
     font-weight: bold;
 }
 

@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 매트릭스 효과 생성
-    const chars = "01";
+    const chars = "ᚠᚡᚢᚣᚤᚥᚦᚧᚨᚩᚪᚫᚬᚭᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉᛊᛋᛌᛍᛎᛏᛐᛑᛒᛓᛔᛕᛖᛗᛘᛙᛚᛛᛜᛝᛞᛟᛠᛡᛢᛣᛤᛥᛦᛧᛨᛩᛪ᛫᛬᛭ᛮᛯᛰ";
     const charArray = chars.split("");
-    const fontSize = 14;
+    const fontSize = 16;
     let columns;
     let drops = [];
 
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 이벤트 리스너
     startButton.addEventListener('click', () => {
         startButton.classList.add('hidden');
+        canvas.style.opacity = '0';
         bathroomBackground.classList.remove('hidden');
         bathroomBackground.style.opacity = '1';
         riddle.classList.remove('hidden');
