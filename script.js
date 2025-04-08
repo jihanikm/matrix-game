@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const chars = "01";
     const charArray = chars.split("");
     const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = [];
+    let columns;
+    let drops = [];
 
-    for (let i = 0; i < columns; i++) {
-        drops[i] = 1;
+    function initMatrix() {
+        columns = Math.floor(canvas.width / fontSize);
+        drops = Array(columns).fill(1);
     }
 
     function drawMatrix() {
@@ -52,9 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         resizeCanvas();
+        initMatrix();
     });
 
     // 초기화
     resizeCanvas();
+    initMatrix();
     const matrixInterval = setInterval(drawMatrix, 33);
 }); 
