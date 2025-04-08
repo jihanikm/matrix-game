@@ -34,8 +34,8 @@ body {
         linear-gradient(-45deg, #99ccff 25%, transparent 25%),
         linear-gradient(45deg, transparent 75%, #99ccff 75%),
         linear-gradient(-45deg, transparent 75%, #99ccff 75%);
-    background-size: 150px 150px;
-    background-position: 0 0, 0 75px, 75px -75px, -75px 0px;
+    background-size: 100px 100px;
+    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
     z-index: 0;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -72,7 +72,7 @@ body {
 
 #startButton {
     padding: 15px 30px;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     background-color: #0F0;
     color: black;
     border: none;
@@ -88,13 +88,14 @@ body {
 
 #riddle {
     text-align: center;
-    font-size: 1.8em;
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: #333;
-    padding: 40px;
+    padding: clamp(20px, 5vw, 40px);
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    line-height: 2;
-    max-width: 800px;
+    line-height: 1.8;
+    max-width: 90%;
+    width: 800px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
@@ -120,4 +121,16 @@ body {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 768px) {
+    #bathroom-background {
+        background-size: 50px 50px;
+        background-position: 0 0, 0 25px, 25px -25px, -25px 0px;
+    }
+    
+    #riddle {
+        padding: 15px;
+        line-height: 1.6;
+    }
 } 
