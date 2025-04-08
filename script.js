@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bathroomBackground = document.getElementById('bathroom-background');
     const startButton = document.getElementById('startButton');
     const riddle = document.getElementById('riddle');
-    const qrCode = document.getElementById('qr-code');
 
     // 캔버스 크기 설정
     function resizeCanvas() {
@@ -41,15 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // QR 코드 생성
-    function createQRCode() {
-        const url = 'https://letstreasurehunt.netlify.app/';
-        const qr = qrcode(0, 'M');
-        qr.addData(url);
-        qr.make();
-        qrCode.innerHTML = qr.createImgTag(10);
-    }
-
     // 이벤트 리스너
     startButton.addEventListener('click', () => {
         startButton.classList.add('hidden');
@@ -66,6 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 초기화
     resizeCanvas();
-    createQRCode();
     const matrixInterval = setInterval(drawMatrix, 33);
 }); 
