@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>매트릭스 게임</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Matrix Game</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 </head>
 <body>
-    <div id="matrix-background"></div>
-    <div id="bathroom-background" class="hidden"></div>
-    
+    <canvas id="matrix-background"></canvas>
+    <div id="bathroom-background"></div>
     <div class="content">
         <button id="startButton">게임 시작</button>
-        <p id="riddle" class="hidden">가장 깊숙한 곳,<br>로봇은 가지 못하는 곳,<br>그곳에 다음 문제가 있다.</p>
+        <div id="riddle" class="hidden">
+            가장 깊숙한 곳,<br>
+            로봇은 가지 못하는 곳,<br>
+            그곳에 다음 문제가 있다.
+        </div>
         <div id="qr-code" class="hidden"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html> 
